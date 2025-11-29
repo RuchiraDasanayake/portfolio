@@ -85,8 +85,8 @@ const DATA = {
   ],
   socials: {
     linkedin: "https://www.linkedin.com/in/ruchira-dasanayake-5baa27274/",
-    github: "#", // Placeholder
-    email: "mailto:contact@ruchira.dev" // Placeholder
+    github: "https://github.com/ruchiradasanayake",
+    email: "drl.dasanayake.official@gmail.com"
   }
 };
 
