@@ -211,7 +211,7 @@ const ThreeBackground = ({ isDark }) => {
         color: isDarkRef.current ? 0x06b6d4 : 0x6366f1, // Cyan vs Indigo
         wireframe: true,
         transparent: true,
-        opacity: 0.09, // Reduced opacity for subtlety
+        opacity: 0.3, // Reduced opacity for subtlety
       });
       wireframeMesh = new THREE.Mesh(geometryWireframe, materialWireframe);
       particleGroup.add(wireframeMesh);
