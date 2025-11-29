@@ -211,7 +211,7 @@ const ThreeBackground = ({ isDark }) => {
         color: isDarkRef.current ? 0x06b6d4 : 0x6366f1, // Cyan vs Indigo
         wireframe: true,
         transparent: true,
-        opacity: 0.05, // Reduced opacity for subtlety
+        opacity: 0.09, // Reduced opacity for subtlety
       });
       wireframeMesh = new THREE.Mesh(geometryWireframe, materialWireframe);
       particleGroup.add(wireframeMesh);
@@ -219,7 +219,7 @@ const ThreeBackground = ({ isDark }) => {
       // --- 2. The Particle Cloud (Raw Data) ---
       const geometryParticles = new THREE.BufferGeometry();
       const vertices = [];
-      const particleCount = 800; // Reduced count for less distraction
+      const particleCount = 1200; // Reduced count for less distraction
 
       for (let i = 0; i < particleCount; i++) {
         const r = 800 + Math.random() * 400; // Spread out more
@@ -238,7 +238,7 @@ const ThreeBackground = ({ isDark }) => {
         color: isDarkRef.current ? 0x06b6d4 : 0x4f46e5, 
         size: 2, // Smaller size
         transparent: true,
-        opacity: 0.3, // Lower opacity
+        opacity: 0.7, // Lower opacity
         sizeAttenuation: true,
         blending: THREE.AdditiveBlending
       });
@@ -284,8 +284,8 @@ const ThreeBackground = ({ isDark }) => {
 
       if (particleGroup) {
         // Automatic Rotation - Slower
-        particleGroup.rotation.y += 0.0005;
-        wireframeMesh.rotation.x -= 0.0005; // Counter-rotate core
+        particleGroup.rotation.y += 0.0007;
+        wireframeMesh.rotation.x -= 0.0007; // Counter-rotate core
 
         // Interactive Tilt - Reduced Sensitivity
         targetX = mouseX * 0.0001;
